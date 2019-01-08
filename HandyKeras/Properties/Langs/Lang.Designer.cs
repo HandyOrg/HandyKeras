@@ -47,7 +47,7 @@ namespace HandyKeras.Properties.Langs {
         }
         
         /// <summary>
-        ///   使用此强类型资源类，为所有资源查找
+        ///   重写当前线程的 CurrentUICulture 属性
         ///   重写当前线程的 CurrentUICulture 属性。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -57,6 +57,24 @@ namespace HandyKeras.Properties.Langs {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 环境安装 的本地化字符串。
+        /// </summary>
+        public static string EnvInstall {
+            get {
+                return ResourceManager.GetString("EnvInstall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 开始安装 的本地化字符串。
+        /// </summary>
+        public static string StartInstallation {
+            get {
+                return ResourceManager.GetString("StartInstallation", resourceCulture);
             }
         }
     }

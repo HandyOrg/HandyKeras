@@ -2,7 +2,7 @@
 
 namespace HandyKeras.ViewModel
 {
-    public class MainViewModel : ViewModelBase
+    internal class MainViewModel : ViewModelBase
     {
         
     }

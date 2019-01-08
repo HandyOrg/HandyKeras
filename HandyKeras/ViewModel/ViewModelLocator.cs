@@ -5,13 +5,14 @@ using GalaSoft.MvvmLight.Ioc;
 
 namespace HandyKeras.ViewModel
 {
-    public class ViewModelLocator
+    internal class ViewModelLocator
     {
         public ViewModelLocator()
         {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 
             SimpleIoc.Default.Register<MainViewModel>();
+            SimpleIoc.Default.Register<EnvInstallViewModel>();
         }
 
         public static ViewModelLocator Instance => new Lazy<ViewModelLocator>(() =>
@@ -20,6 +21,8 @@ namespace HandyKeras.ViewModel
         #region Vm
 
         public MainViewModel Main => ServiceLocator.Current.GetInstance<MainViewModel>();
+
+        public EnvInstallViewModel EnvInstall => ServiceLocator.Current.GetInstance<EnvInstallViewModel>();
 
         #endregion
     }
