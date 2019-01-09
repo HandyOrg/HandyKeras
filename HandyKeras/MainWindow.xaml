@@ -19,5 +19,5 @@
                            DataContext="{Binding Main,Source={StaticResource Locator}}"
                            d:DesignHeight="800" 
                            d:DesignWidth="1400">
-    <userControl:CreateProjectCtl/>
+    <userControl:MapCtl/>
 </controls:WindowBorderless>

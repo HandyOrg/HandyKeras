@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="HandyKeras.UserControl.MapCtl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Background="{StaticResource RegionBrush}"
+             Height="375.843"
+             Width="377.528">
+    <Path Stroke="Black" StrokeThickness="2" SnapsToDevicePixels="True">
+        <Path.Data>
+            <PathGeometry>
+                <PathGeometry.Figures>
+                    <PathFigureCollection>
+                        <PathFigure StartPoint="0,0">
+                            <PathFigure.Segments>
+                                <PathSegmentCollection>
+                                    <BezierSegment Point1="1,0" Point2="0,1" Point3="1,1" />
+                                </PathSegmentCollection>
+                            </PathFigure.Segments>
+                        </PathFigure>
+                    </PathFigureCollection>
+                </PathGeometry.Figures>
+            </PathGeometry>
+        </Path.Data>
+    </Path>
+</UserControl>

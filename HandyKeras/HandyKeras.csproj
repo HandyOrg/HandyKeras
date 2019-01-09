@@ -95,6 +95,9 @@
     <Compile Include="UserControl\CreateProjectCtl.xaml.cs">
       <DependentUpon>CreateProjectCtl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\MapCtl.xaml.cs">
+      <DependentUpon>MapCtl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\CreateProjectViewModel.cs" />
     <Compile Include="ViewModel\EnvInstallViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
@@ -147,6 +150,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControl\CreateProjectCtl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\MapCtl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
