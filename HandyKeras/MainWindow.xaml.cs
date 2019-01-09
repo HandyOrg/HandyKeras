@@ -15,7 +15,7 @@ namespace HandyKeras
         {
             base.OnSourceInitialized(e);
 
-            if (!GlobalData.AppConfig.PipInstalled)
+            if (!GlobalData.AppConfig.KerasInstalled)
             {
                 var window = new EnvInstallWindow()
                 {
@@ -23,7 +23,7 @@ namespace HandyKeras
                 };
                 if (window.ShowDialog() == false)
                 {
-                    Environment.Exit(0);
+                    Close();
                 }
             }
         }

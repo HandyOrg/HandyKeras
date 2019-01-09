@@ -19,10 +19,9 @@
                            DataContext="{Binding EnvInstall,Source={StaticResource Locator}}"
                            Style="{StaticResource CustomWindowStyle}">
     <Grid>
-        <StackPanel VerticalAlignment="Center">
-            <Image Width="200" Source="/HandyKeras;component/Resources/Img/keras.png"/>
-            <Button Margin="0,64,0,0" Width="200" Content="{x:Static langs:Lang.StartInstallation}" Command="{Binding InstallCmd}"/>
-        </StackPanel>
-        <ProgressBar VerticalAlignment="Bottom" Style="{StaticResource ProgressBarFlat}" Value="0"/>
+        <Image Width="200" VerticalAlignment="Top" Margin="0,64,0,0" Source="/HandyKeras;component/Resources/Img/keras.png"/>
+        <Button VerticalAlignment="Bottom" Visibility="{Binding IsDownloading,Converter={StaticResource Boolean2VisibilityReConverter}}" Margin="0,0,0,64" Width="200" Content="{Binding IsInstalled,Converter={StaticResource Boolean2StrConverter},ConverterParameter={x:Static langs:Lang.EnvStatusStr}}" Command="{Binding InstallCmd}"/>
+        <controls:LoadingCircle Visibility="{Binding IsDownloading,Converter={StaticResource Boolean2VisibilityConverter}}" VerticalAlignment="Bottom" Margin="0,0,0,100" IsRunning="{Binding IsDownloading}"/>
+        <TextBlock Visibility="{Binding IsDownloading,Converter={StaticResource Boolean2VisibilityConverter}}" Text="{x:Static langs:Lang.KerasDownloadWaitOn}" Style="{StaticResource TextBlockDefault}" VerticalAlignment="Bottom" Margin="0,0,0,72"/>
     </Grid>
 </controls:WindowBorderless>

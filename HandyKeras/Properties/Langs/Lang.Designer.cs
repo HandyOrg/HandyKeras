@@ -61,6 +61,60 @@ namespace HandyKeras.Properties.Langs {
         }
         
         /// <summary>
+        ///   查找类似 HandyKeras 的本地化字符串。
+        /// </summary>
+        public static string AppName {
+            get {
+                return ResourceManager.GetString("AppName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 即将呈现 的本地化字符串。
+        /// </summary>
+        public static string ComingSoon {
+            get {
+                return ResourceManager.GetString("ComingSoon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 创建空白项目 的本地化字符串。
+        /// </summary>
+        public static string CreateBlankProject {
+            get {
+                return ResourceManager.GetString("CreateBlankProject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 创建不包含任何文件的空白项目 的本地化字符串。
+        /// </summary>
+        public static string CreateBlankProjectDetail {
+            get {
+                return ResourceManager.GetString("CreateBlankProjectDetail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 创建新项目 的本地化字符串。
+        /// </summary>
+        public static string CreateNewProject {
+            get {
+                return ResourceManager.GetString("CreateNewProject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 选择一份项目模板以开始 的本地化字符串。
+        /// </summary>
+        public static string CreateNewProjectDetail {
+            get {
+                return ResourceManager.GetString("CreateNewProjectDetail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 环境安装 的本地化字符串。
         /// </summary>
         public static string EnvInstall {
@@ -70,11 +124,92 @@ namespace HandyKeras.Properties.Langs {
         }
         
         /// <summary>
+        ///   查找类似 开始安装;无需安装 的本地化字符串。
+        /// </summary>
+        public static string EnvStatusStr {
+            get {
+                return ResourceManager.GetString("EnvStatusStr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 请稍后，正在下载Keras环境 的本地化字符串。
+        /// </summary>
+        public static string KerasDownloadWaitOn {
+            get {
+                return ResourceManager.GetString("KerasDownloadWaitOn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 线性回归 的本地化字符串。
+        /// </summary>
+        public static string LinearRegression {
+            get {
+                return ResourceManager.GetString("LinearRegression", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 MNIST 手写数字 的本地化字符串。
+        /// </summary>
+        public static string Mnist {
+            get {
+                return ResourceManager.GetString("Mnist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 MNIST 手写数字（卷积） 的本地化字符串。
+        /// </summary>
+        public static string MnistConv {
+            get {
+                return ResourceManager.GetString("MnistConv", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 打开本地项目 的本地化字符串。
+        /// </summary>
+        public static string OpenLocalProject {
+            get {
+                return ResourceManager.GetString("OpenLocalProject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 打开本地HandyKeras项目 的本地化字符串。
+        /// </summary>
+        public static string OpenLocalProjectDetail {
+            get {
+                return ResourceManager.GetString("OpenLocalProjectDetail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 打开最近项 的本地化字符串。
+        /// </summary>
+        public static string OpenRecentlyProject {
+            get {
+                return ResourceManager.GetString("OpenRecentlyProject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 开始安装 的本地化字符串。
         /// </summary>
         public static string StartInstallation {
             get {
                 return ResourceManager.GetString("StartInstallation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 选择项目开始的方式 的本地化字符串。
+        /// </summary>
+        public static string StartProject {
+            get {
+                return ResourceManager.GetString("StartProject", resourceCulture);
             }
         }
     }

@@ -11,7 +11,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/SkinDefault.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/Theme.xaml"/>
-                <ResourceDictionary Source="Resources/Themes/Styles/Style.xaml"/>
+                <ResourceDictionary Source="Resources/Themes/Theme.xaml"/>
                 <ResourceDictionary>
                     <viewModel:ViewModelLocator x:Key="Locator" d:IsDataSource="True"/>
                 </ResourceDictionary>

@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Img\icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonServiceLocator.2.0.2\lib\net45\CommonServiceLocator.dll</HintPath>
@@ -72,16 +75,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Data\AppConfig.cs" />
+    <Compile Include="Data\Cache\ProjectInfoCache.cs" />
+    <Compile Include="Data\Config\AppConfig.cs" />
     <Compile Include="Data\GlobalData.cs" />
     <Compile Include="Data\InternalStr.cs" />
-    <Compile Include="Data\UserConfig.cs" />
+    <Compile Include="Data\MessageToken.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MessageToken.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Config\UserConfig.cs" />
+    <Compile Include="Data\Model\ProjectInfoModel.cs" />
     <Compile Include="Properties\Langs\Lang.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Lang.resx</DependentUpon>
     </Compile>
     <Compile Include="Tools\ComponentHelper.cs" />
+    <Compile Include="UserControl\CreateProjectCtl.xaml.cs">
+      <DependentUpon>CreateProjectCtl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\CreateProjectViewModel.cs" />
     <Compile Include="ViewModel\EnvInstallViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
@@ -120,7 +134,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Resources\Themes\Styles\ListBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resources\Themes\Styles\Style.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Themes\Theme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\CreateProjectCtl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -140,7 +166,6 @@
   <ItemGroup>
     <Folder Include="Data\Exception\" />
     <Folder Include="Service\" />
-    <Folder Include="UserControl\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Langs\Lang.resx">
@@ -151,9 +176,26 @@
   <ItemGroup>
     <Resource Include="Resources\Img\keras.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\MessageToken.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MessageToken.cs</LastGenOutput>
+    </Content>
+    <Resource Include="Resources\Img\BlankApplication_32x.png" />
+    <Resource Include="Resources\Img\NewSolutionFolder_32x.png" />
+    <Resource Include="Resources\Img\OpenFolder_32x.png" />
+    <Resource Include="Resources\Img\icon.ico" />
+    <Resource Include="Resources\Img\Cover\mnist conv_cover.png" />
+    <Resource Include="Resources\Img\Cover\linear regression_cover.png" />
+    <Resource Include="Resources\Img\Cover\mnist_cover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>md $(TargetDir)Component
+    <PreBuildEvent>md $(TargetDir)Config
+md $(TargetDir)Component
 xcopy /e /r /y $(SolutionDir)HandyKeras\Component $(TargetDir)Component</PreBuildEvent>
   </PropertyGroup>
 </Project>

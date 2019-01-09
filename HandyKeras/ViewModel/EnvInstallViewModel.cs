@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.CommandWpf;
+using GalaSoft.MvvmLight.Messaging;
 using HandyControl.Controls;
 using HandyKeras.Data;
 
@@ -14,19 +15,38 @@ namespace HandyKeras.ViewModel
 
         private bool _isDownloading;
 
+        public bool IsDownloading
+        {
+            get => _isDownloading;
+            set => Set(ref _isDownloading, value);
+        }
+
+        private bool _isInstalled;
+
+        public bool IsInstalled
+        {
+            get => _isInstalled;
+            set => Set(ref _isInstalled, value);
+        }
+
+        public EnvInstallViewModel()
+        {
+            IsInstalled = GlobalData.AppConfig.KerasInstalled;
+        }
+
         /// <summary>
         ///     安装命令
         /// </summary>
-        public RelayCommand InstallCmd => new Lazy<RelayCommand>(() => new RelayCommand(Install)).Value;
+        public RelayCommand InstallCmd => new Lazy<RelayCommand>(() => new RelayCommand(Install, () => !IsInstalled)).Value;
 
         /// <summary>
         ///     安装
         /// </summary>
         private void Install()
         {
-            if (_isDownloading) return;
+            if (IsDownloading) return;
 
-            _isDownloading = true;
+            IsDownloading = true;
             var start = new ProcessStartInfo
             {
                 FileName = "cmd.exe",
@@ -49,11 +69,11 @@ namespace HandyKeras.ViewModel
                     {
                         await _installProcess.StandardOutput.ReadToEndAsync();
                         _installProcess.WaitForExit();
-                        _installProcess.Close();
-                        GlobalData.AppConfig.PipInstalled = true;
-                        _isDownloading = false;
                     }).ContinueWith(task =>
                     {
+                        _installProcess.Close();
+                        IsDownloading = false;
+
                         if (task.IsFaulted)
                         {
                             if (task.Exception != null)
@@ -64,12 +84,18 @@ namespace HandyKeras.ViewModel
                                 }
                             }
                         }
-                        _isDownloading = false;
+                        else
+                        {
+                            GlobalData.AppConfig.KerasInstalled = true;
+                            IsInstalled = true;
+
+                            Messenger.Default.Send<object>(null, MessageToken.CloseEnvInstallWindow);
+                        }
                     });
                 }
                 catch (Exception e)
                 {
-                    _isDownloading = false;
+                    IsDownloading = false;
                     Growl.Error(e.Message);
                 }
             }

@@ -1,0 +1,43 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ import namespace="System.Collections.Generic"#>
+<#@ output extension=".cs" #>
+<# 
+var controlList = new List<string>
+{
+	
+};
+var styleList = new List<string>
+{
+	
+};
+var windowList = new List<string>
+{
+	
+};
+var funcList = new List<string>
+{
+	"CloseEnvInstallWindow"
+};
+#>
+namespace HandyKeras.Data
+{
+	public class MessageToken
+    {
+    <#foreach(var item in controlList){#>
+    public static readonly string <#=item#> = nameof(<#=item#>);
+	
+    <#}#>
+<#foreach(var item in styleList){#>
+    public static readonly string <#=item#> = nameof(<#=item#>);
+
+    <#}#>
+<#foreach(var item in windowList){#>
+    public static readonly string <#=item#> = nameof(<#=item#>);
+
+    <#}#>
+<#foreach(var item in funcList){#>
+    public static readonly string <#=item#> = nameof(<#=item#>);
+
+    <#}#>
+}
+}

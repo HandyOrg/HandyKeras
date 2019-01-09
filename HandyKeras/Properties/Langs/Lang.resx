@@ -103,4 +103,49 @@
   <data name="StartInstallation" xml:space="preserve">
     <value>开始安装</value>
   </data>
+  <data name="EnvStatusStr" xml:space="preserve">
+    <value>开始安装;无需安装</value>
+  </data>
+  <data name="KerasDownloadWaitOn" xml:space="preserve">
+    <value>请稍后，正在下载Keras环境</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>HandyKeras</value>
+  </data>
+  <data name="OpenRecentlyProject" xml:space="preserve">
+    <value>打开最近项</value>
+  </data>
+  <data name="StartProject" xml:space="preserve">
+    <value>选择项目开始的方式</value>
+  </data>
+  <data name="ComingSoon" xml:space="preserve">
+    <value>即将呈现</value>
+  </data>
+  <data name="Mnist" xml:space="preserve">
+    <value>MNIST 手写数字</value>
+  </data>
+  <data name="LinearRegression" xml:space="preserve">
+    <value>线性回归</value>
+  </data>
+  <data name="MnistConv" xml:space="preserve">
+    <value>MNIST 手写数字（卷积）</value>
+  </data>
+  <data name="CreateBlankProject" xml:space="preserve">
+    <value>创建空白项目</value>
+  </data>
+  <data name="OpenLocalProject" xml:space="preserve">
+    <value>打开本地项目</value>
+  </data>
+  <data name="CreateNewProject" xml:space="preserve">
+    <value>创建新项目</value>
+  </data>
+  <data name="CreateBlankProjectDetail" xml:space="preserve">
+    <value>创建不包含任何文件的空白项目</value>
+  </data>
+  <data name="OpenLocalProjectDetail" xml:space="preserve">
+    <value>打开本地HandyKeras项目</value>
+  </data>
+  <data name="CreateNewProjectDetail" xml:space="preserve">
+    <value>选择一份项目模板以开始</value>
+  </data>
 </root>

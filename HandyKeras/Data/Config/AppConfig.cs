@@ -6,6 +6,6 @@ namespace HandyKeras.Data
     {
         public static string SavePath = $"{AppDomain.CurrentDomain.BaseDirectory}Config/AppConfig.json";
 
-        public bool PipInstalled { get; set; }
+        public bool KerasInstalled { get; set; }
     }
 }
