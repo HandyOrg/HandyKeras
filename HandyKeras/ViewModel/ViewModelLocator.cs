@@ -14,6 +14,7 @@ namespace HandyKeras.ViewModel
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<EnvInstallViewModel>();
             SimpleIoc.Default.Register<CreateProjectViewModel>();
+            SimpleIoc.Default.Register<MapViewModel>();
         }
 
         public static ViewModelLocator Instance => new Lazy<ViewModelLocator>(() =>
@@ -32,6 +33,8 @@ namespace HandyKeras.ViewModel
         #region control
 
         public CreateProjectViewModel CreateProject => ServiceLocator.Current.GetInstance<CreateProjectViewModel>();
+
+        public MapViewModel Map => ServiceLocator.Current.GetInstance<MapViewModel>();
 
         #endregion
 

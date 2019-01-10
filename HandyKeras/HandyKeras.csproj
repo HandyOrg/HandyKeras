@@ -49,8 +49,8 @@
     <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.4.1.0, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
       <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
     </Reference>
-    <Reference Include="HandyControl, Version=1.5.1.986, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\HandyControl.1.5.1\lib\net462\HandyControl.dll</HintPath>
+    <Reference Include="HandyControl, Version=1.5.1.41746, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HandyControl.1.5.2\lib\net462\HandyControl.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -77,6 +77,7 @@
     </ApplicationDefinition>
     <Compile Include="Data\Cache\ProjectInfoCache.cs" />
     <Compile Include="Data\Config\AppConfig.cs" />
+    <Compile Include="Data\Enum\LayersType.cs" />
     <Compile Include="Data\GlobalData.cs" />
     <Compile Include="Data\InternalStr.cs" />
     <Compile Include="Data\MessageToken.cs">
@@ -92,6 +93,10 @@
       <DependentUpon>Lang.resx</DependentUpon>
     </Compile>
     <Compile Include="Tools\ComponentHelper.cs" />
+    <Compile Include="UserControl\Basic\BezierCurve.cs" />
+    <Compile Include="UserControl\Basic\MapItem.xaml.cs">
+      <DependentUpon>MapItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\CreateProjectCtl.xaml.cs">
       <DependentUpon>CreateProjectCtl.xaml</DependentUpon>
     </Compile>
@@ -101,6 +106,7 @@
     <Compile Include="ViewModel\CreateProjectViewModel.cs" />
     <Compile Include="ViewModel\EnvInstallViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\MapViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="Window\EnvInstallWindow.xaml.cs">
       <DependentUpon>EnvInstallWindow.xaml</DependentUpon>
@@ -149,6 +155,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControl\Basic\MapItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControl\CreateProjectCtl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -173,6 +183,7 @@
   <ItemGroup>
     <Folder Include="Data\Exception\" />
     <Folder Include="Service\" />
+    <Folder Include="Tools\Converter\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Langs\Lang.resx">
