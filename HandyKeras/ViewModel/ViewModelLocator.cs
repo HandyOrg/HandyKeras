@@ -15,6 +15,7 @@ namespace HandyKeras.ViewModel
             SimpleIoc.Default.Register<EnvInstallViewModel>();
             SimpleIoc.Default.Register<CreateProjectViewModel>();
             SimpleIoc.Default.Register<MapViewModel>();
+            SimpleIoc.Default.Register<LayerSelectViewModel>();
         }
 
         public static ViewModelLocator Instance => new Lazy<ViewModelLocator>(() =>
@@ -35,6 +36,8 @@ namespace HandyKeras.ViewModel
         public CreateProjectViewModel CreateProject => ServiceLocator.Current.GetInstance<CreateProjectViewModel>();
 
         public MapViewModel Map => ServiceLocator.Current.GetInstance<MapViewModel>();
+
+        public LayerSelectViewModel LayerSelect => ServiceLocator.Current.GetInstance<LayerSelectViewModel>();
 
         #endregion
 

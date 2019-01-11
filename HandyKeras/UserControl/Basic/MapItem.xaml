@@ -6,11 +6,13 @@
              xmlns:interactivity="clr-namespace:HandyControl.Interactivity;assembly=HandyControl"
              mc:Ignorable="d" 
              Height="100" 
-             Width="128" RenderTransformOrigin="0.5,0.5">
+             x:Name="UserControlThis"
+             MinWidth="120"
+             RenderTransformOrigin="0.5,0.5">
     <interactivity:Interaction.Behaviors>
         <interactivity:MouseDragElementBehavior ConstrainToParentBounds="true" Dragging="MouseDragElementBehavior_OnDragging"/>
     </interactivity:Interaction.Behaviors>
-    <GroupBox Header="123">
+    <GroupBox Header="{Binding Title,ElementName=UserControlThis}" Background="White">
         <UniformGrid></UniformGrid>
     </GroupBox>
 </UserControl>

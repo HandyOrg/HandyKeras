@@ -86,6 +86,7 @@
       <DependentUpon>MessageToken.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\Config\UserConfig.cs" />
+    <Compile Include="Data\Model\LayerModel.cs" />
     <Compile Include="Data\Model\ProjectInfoModel.cs" />
     <Compile Include="Properties\Langs\Lang.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -93,18 +94,35 @@
       <DependentUpon>Lang.resx</DependentUpon>
     </Compile>
     <Compile Include="Tools\ComponentHelper.cs" />
+    <Compile Include="Tools\Converter\StringSubstringConverter.cs" />
     <Compile Include="UserControl\Basic\BezierCurve.cs" />
+    <Compile Include="UserControl\Basic\LayerItem.xaml.cs">
+      <DependentUpon>LayerItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\Basic\MapItem.xaml.cs">
       <DependentUpon>MapItem.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControl\CreateProjectCtl.xaml.cs">
       <DependentUpon>CreateProjectCtl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\LayerSelectCtl.xaml.cs">
+      <DependentUpon>LayerSelectCtl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Main\TopContent.xaml.cs">
+      <DependentUpon>TopContent.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\MapCtl.xaml.cs">
       <DependentUpon>MapCtl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\PropertiesCtl.xaml.cs">
+      <DependentUpon>PropertiesCtl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Main\RightContent.xaml.cs">
+      <DependentUpon>RightContent.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\CreateProjectViewModel.cs" />
     <Compile Include="ViewModel\EnvInstallViewModel.cs" />
+    <Compile Include="ViewModel\LayerSelectViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\MapViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
@@ -155,6 +173,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControl\Basic\LayerItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControl\Basic\MapItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -163,7 +185,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControl\LayerSelectCtl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\Main\TopContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControl\MapCtl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\PropertiesCtl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\Main\RightContent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -183,7 +221,7 @@
   <ItemGroup>
     <Folder Include="Data\Exception\" />
     <Folder Include="Service\" />
-    <Folder Include="Tools\Converter\" />
+    <Folder Include="UserControl\Layer\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Langs\Lang.resx">

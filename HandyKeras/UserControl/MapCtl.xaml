@@ -3,23 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:basic="clr-namespace:HandyKeras.UserControl.Basic"
              mc:Ignorable="d" 
-             Background="{StaticResource RegionBrush}"
+             Background="{StaticResource MainContentForegroundDrawingBrush}"
              DataContext="{Binding Map,Source={StaticResource Locator}}"
              d:DesignHeight="500"
              d:DesignWidth="1000">
     <Grid>
-        <Canvas>
-            <basic:BezierCurve x:Name="BezierCurve1" Start="{Binding RightPos,ElementName=MapItem1}" End="{Binding LeftPos,ElementName=MapItem2}" Stroke="{StaticResource PrimaryBrush}" StrokeThickness="2"/>
+        <ContentControl Content="{Binding BezierCurveContainer}"/>
+        <ContentControl Content="{Binding MapItemContainer}"/>
+        <!--<Canvas>
+            --><!--<basic:BezierCurve x:Name="BezierCurve1" Start="{Binding RightPos,ElementName=MapItem1}" End="{Binding LeftPos,ElementName=MapItem2}" Stroke="{StaticResource PrimaryBrush}" StrokeThickness="2"/>
             <basic:BezierCurve Start="{Binding RightPos,ElementName=MapItem3}" End="{Binding LeftPos,ElementName=MapItem2}" Stroke="{StaticResource PrimaryBrush}" StrokeThickness="2"/>
             <basic:BezierCurve Start="{Binding RightPos,ElementName=MapItem2}" End="{Binding LeftPos,ElementName=MapItem4}" Stroke="{StaticResource PrimaryBrush}" StrokeThickness="2"/>
             <basic:BezierCurve Start="{Binding RightPos,ElementName=MapItem4}" End="{Binding LeftPos,ElementName=MapItem5}" Stroke="{StaticResource PrimaryBrush}" StrokeThickness="2"/>
             <basic:BezierCurve Start="{Binding RightPos,ElementName=MapItem4}" End="{Binding LeftPos,ElementName=MapItem6}" Stroke="{StaticResource PrimaryBrush}" StrokeThickness="2"/>
-            <basic:BezierCurve Start="{Binding RightPos,ElementName=MapItem4}" End="{Binding LeftPos,ElementName=MapItem7}" Stroke="{StaticResource PrimaryBrush}" StrokeThickness="2"/>
+            <basic:BezierCurve Start="{Binding RightPos,ElementName=MapItem4}" End="{Binding LeftPos,ElementName=MapItem7}" Stroke="{StaticResource PrimaryBrush}" StrokeThickness="2"/>--><!--
         </Canvas>
         <Canvas>
-            <basic:MapItem x:Name="MapItem1">
+            --><!--<basic:MapItem x:Name="MapItem1">
                 <basic:MapItem.RenderTransform>
                     <TransformGroup>
                         <TranslateTransform X="100" Y="110"/>
@@ -67,7 +68,7 @@
                         <TranslateTransform X="814" Y="320"/>
                     </TransformGroup>
                 </basic:MapItem.RenderTransform>
-            </basic:MapItem>
-        </Canvas>
+            </basic:MapItem>--><!--
+        </Canvas>-->
     </Grid>
 </UserControl>

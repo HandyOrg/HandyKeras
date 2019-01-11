@@ -16,7 +16,8 @@ var windowList = new List<string>
 };
 var funcList = new List<string>
 {
-	"CloseEnvInstallWindow"
+	"CloseEnvInstallWindow",
+	"AddMapItem"
 };
 #>
 namespace HandyKeras.Data

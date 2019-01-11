@@ -30,6 +30,15 @@ namespace HandyKeras.UserControl.Basic
             set => SetValue(RightPosProperty, value);
         }
 
+        public static readonly DependencyProperty TitleProperty = DependencyProperty.Register(
+            "Title", typeof(string), typeof(MapItem), new PropertyMetadata(default(string)));
+
+        public string Title
+        {
+            get => (string) GetValue(TitleProperty);
+            set => SetValue(TitleProperty, value);
+        }
+
         private void MouseDragElementBehavior_OnDragging(object sender, MouseEventArgs e) => Update();
 
         private void Update()

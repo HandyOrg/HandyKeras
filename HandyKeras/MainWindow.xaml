@@ -19,5 +19,16 @@
                            DataContext="{Binding Main,Source={StaticResource Locator}}"
                            d:DesignHeight="800" 
                            d:DesignWidth="1400">
-    <userControl:MapCtl/>
+    <controls:Window.NonClientAreaContent>
+        <userControl:TopContent/>
+    </controls:Window.NonClientAreaContent>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto" MinWidth="300" MaxWidth="400"/>
+        </Grid.ColumnDefinitions>
+        <userControl:MapCtl/>
+        <userControl:RightContent Grid.Column="1"/>
+        <GridSplitter Grid.Column="0" Width="4" BorderThickness="0,0,1,0" BorderBrush="{StaticResource BorderBrush}" Background="Transparent"/>
+    </Grid>
 </controls:Window>
