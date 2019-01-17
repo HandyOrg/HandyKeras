@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Threading.Tasks;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.CommandWpf;
 using HandyKeras.Data;
-using HandyKeras.Data.Model;
 
 namespace HandyKeras.ViewModel
 {

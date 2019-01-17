@@ -26,11 +26,11 @@
         </Setter>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="true">
-                <Setter Property="Background" Value="{DynamicResource DarkDefaultBrush}"/>
+                <Setter Property="Background" Value="{StaticResource DarkDefaultBrush}"/>
             </Trigger>
             <Trigger Property="IsSelected" Value="true">
-                <Setter Property="Background" Value="{DynamicResource PrimaryBrush}"/>
-                <Setter Property="Foreground" Value="{DynamicResource TextIconBrush}"/>
+                <Setter Property="Background" Value="{StaticResource PrimaryBrush}"/>
+                <Setter Property="Foreground" Value="{StaticResource TextIconBrush}"/>
             </Trigger>
         </Style.Triggers>
     </Style>

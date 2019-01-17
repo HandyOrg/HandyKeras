@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace HandyKeras.UserControl.Basic
+namespace HandyKeras.UserControl
 {
     public partial class LayerItem
     {

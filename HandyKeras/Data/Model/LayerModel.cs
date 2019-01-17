@@ -1,4 +1,4 @@
-﻿namespace HandyKeras.Data.Model
+﻿namespace HandyKeras.Data
 {
     internal class LayerModel
     {

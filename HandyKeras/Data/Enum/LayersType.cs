@@ -1,4 +1,4 @@
-﻿namespace HandyKeras.Data.Enum
+﻿namespace HandyKeras.Data
 {
     /// <summary>
     ///     核心网络层

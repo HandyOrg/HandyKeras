@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
-namespace HandyKeras.UserControl.Basic
+namespace HandyKeras.UserControl
 {
     /// <summary>
     ///     贝塞尔曲线

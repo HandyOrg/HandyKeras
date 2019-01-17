@@ -4,8 +4,6 @@ using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.CommandWpf;
 using GalaSoft.MvvmLight.Messaging;
 using HandyKeras.Data;
-using HandyKeras.Data.Model;
-
 namespace HandyKeras.ViewModel
 {
     internal class LayerSelectViewModel : ViewModelBase

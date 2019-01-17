@@ -3,8 +3,8 @@
          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
          xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-         xmlns:basic="clr-namespace:HandyKeras.UserControl.Basic"
          xmlns:interactivity="clr-namespace:HandyControl.Interactivity;assembly=HandyControl"
+         xmlns:userControl="clr-namespace:HandyKeras.UserControl"
          mc:Ignorable="d"
          BorderThickness="0"
          Padding="0,10,0,0"
@@ -15,7 +15,7 @@
          d:DesignHeight="450">
     <ListBox.ItemTemplate>
         <DataTemplate>
-            <basic:LayerItem Title="{Binding Name}" Detail="{Binding Detail}"/>
+            <userControl:LayerItem Title="{Binding Name}" Detail="{Binding Detail}"/>
         </DataTemplate>
     </ListBox.ItemTemplate>
     <interactivity:Interaction.Triggers>

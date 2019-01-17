@@ -2,6 +2,7 @@
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="ListBox.xaml"/>
+        <ResourceDictionary Source="BezierCurve.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
 </ResourceDictionary>

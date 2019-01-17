@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using HandyKeras.Data.Model;
 
 namespace HandyKeras.Data
 {

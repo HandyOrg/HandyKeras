@@ -2,8 +2,7 @@
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Messaging;
 using HandyKeras.Data;
-using HandyKeras.Data.Model;
-using HandyKeras.UserControl.Basic;
+using HandyKeras.UserControl;
 
 namespace HandyKeras.ViewModel
 {
